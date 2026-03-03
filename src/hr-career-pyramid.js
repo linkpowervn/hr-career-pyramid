@@ -81,12 +81,6 @@ class HrCareerPyramid extends LitElement {
   render() {
     return html`
       <div class="pyramid-container">
-        <!-- SVG diagonal angle lines -->
-        <svg class="angle-lines" viewBox="0 0 1000 800" preserveAspectRatio="none">
-          <line x1="500" y1="0" x2="0" y2="800" stroke="rgba(200, 168, 74, 0.4)" stroke-width="1.5" />
-          <line x1="500" y1="0" x2="1000" y2="800" stroke="rgba(200, 168, 74, 0.4)" stroke-width="1.5" />
-        </svg>
-
         <!-- Shared top rows -->
         <div class="shared-rows">
           ${this._renderSharedRow(0, 'CHRO', 'chro')}
@@ -130,16 +124,6 @@ class HrCareerPyramid extends LitElement {
       position: relative;
     }
 
-    /* ---- SVG angle lines ---- */
-    .angle-lines {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
-
     /* ---- Shared rows (top 3) ---- */
     .shared-rows {
       display: flex;
@@ -148,7 +132,6 @@ class HrCareerPyramid extends LitElement {
       gap: clamp(2px, 0.3cqw, 4px);
       width: 100%;
       position: relative;
-      z-index: 1;
     }
 
     .shared-row {
@@ -200,7 +183,6 @@ class HrCareerPyramid extends LitElement {
       gap: clamp(2px, 0.35cqw, 4px);
       width: 100%;
       position: relative;
-      z-index: 1;
     }
 
     .branch-row {
@@ -234,9 +216,10 @@ class HrCareerPyramid extends LitElement {
     }
 
     .cell.empty {
-      background: transparent;
+      background: #2C271E;
       cursor: default;
       pointer-events: none;
+      border: 1px solid #4a4530;
     }
 
     .cell.highlighted {
@@ -260,7 +243,6 @@ class HrCareerPyramid extends LitElement {
       gap: clamp(2px, 0.3cqw, 4px);
       margin-top: clamp(2px, 0.5cqw, 6px);
       position: relative;
-      z-index: 1;
     }
 
     .col-label {
@@ -276,6 +258,20 @@ class HrCareerPyramid extends LitElement {
 
     .col-label.highlighted {
       color: #e8b30e;
+    }
+
+    /* ---- Mobile: flat grid layout ---- */
+    @container (max-width: 480px) {
+      .shared-row {
+        width: 100% !important;
+        clip-path: none !important;
+        border-radius: 4px;
+      }
+
+      .branch-row {
+        width: 100% !important;
+        min-height: 32px !important;
+      }
     }
   `;
 }
