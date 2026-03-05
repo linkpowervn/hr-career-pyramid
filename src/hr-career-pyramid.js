@@ -16,11 +16,11 @@ class HrCareerPyramid extends LitElement {
 
   get _branchRows() {
     return [
-      ['C&B MGR', 'TA MGR', '', '', '', 'L&D MGR'],
-      ['', '', 'HRBP SUPV', 'HRM', 'OD MGR', 'L&D SUPV'],
-      ['C&B SUPV', 'TA SUPV', '', 'HR GEN SUPV', 'OD SUPV', ''],
-      ['C&B SPEC', 'TA SPEC', 'HRBP SPEC', 'HR GEN SPEC', 'OD SPEC', 'L&D SPEC'],
-      ['PAYROLL', 'RECUIMENT', '', 'HR EXECUTIVE', '', 'TRAINING'],
+      ['C&B MANAGER', 'TA MANAGER', '', '', '', 'L&D MANAGER'],
+      ['', '', 'HRBP SUPEVISOR', 'HRM', 'OD MANAGER', 'L&D SUPEVISOR'],
+      ['C&B SUPEVISOR', 'TA SUPEVISOR', '', 'HR GEN SUPEVISOR', 'OD SUPEVISOR', ''],
+      ['C&B SPECIALIST', 'TA SPECIALIST', 'HRBP SPECIALIST', 'HR GEN SPECIALIST', 'OD SPECIALIST', 'L&D SPECIALIST'],
+      ['PAYROLL', 'RECRUIMENT', '', 'HR EXECUTIVE', '', 'TRAINING'],
     ];
   }
 
@@ -148,7 +148,7 @@ class HrCareerPyramid extends LitElement {
     /* CHRO - gold trapezoid */
     .chro {
       height: clamp(28px, 4.5cqw, 48px);
-      background: #e8b30e;
+      background: #f8ca11;
       color: #000;
       font-size: clamp(9px, 1.6cqw, 15px);
       clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
@@ -157,8 +157,8 @@ class HrCareerPyramid extends LitElement {
     /* HRD - dark olive-gold with border */
     .hrd {
       height: clamp(24px, 3.8cqw, 38px);
-      background: #5c4a1e;
-      color: #fff;
+      background: #ffc751;
+      color: #000;
       font-size: clamp(8px, 1.4cqw, 13px);
       border-radius: 4px;
       border: 1.5px solid #8a7332;
@@ -167,7 +167,7 @@ class HrCareerPyramid extends LitElement {
     /* HRBP Manager - cream/tan with border */
     .hrbp-mgr {
       height: clamp(24px, 3.8cqw, 38px);
-      background: #a89050;
+      background: #fee0a0;
       color: #000;
       font-size: clamp(8px, 1.3cqw, 12px);
       font-weight: 800;
