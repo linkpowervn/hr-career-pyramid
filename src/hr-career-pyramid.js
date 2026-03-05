@@ -157,7 +157,7 @@ class HrCareerPyramid extends LitElement {
     /* HRD - dark olive-gold with border */
     .hrd {
       height: clamp(24px, 3.8cqw, 38px);
-      background: #ffc751;
+      background: #f8ca11;
       color: #000;
       font-size: clamp(8px, 1.4cqw, 13px);
       border-radius: 4px;
@@ -167,7 +167,7 @@ class HrCareerPyramid extends LitElement {
     /* HRBP Manager - cream/tan with border */
     .hrbp-mgr {
       height: clamp(24px, 3.8cqw, 38px);
-      background: #fee0a0;
+      background: #f8ca11;
       color: #000;
       font-size: clamp(8px, 1.3cqw, 12px);
       font-weight: 800;
@@ -212,7 +212,8 @@ class HrCareerPyramid extends LitElement {
     }
 
     .cell.filled:hover {
-      background: #4a4530;
+      background: #f8ca11;
+      color: #000;
     }
 
     .cell.empty {
